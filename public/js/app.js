@@ -8,7 +8,7 @@ const searchInput = document.querySelector('input');
 searchForm.addEventListener('submit', (event) => {
   event.preventDefault();
   const searchValue = searchInput.value;
-  fetch(`http://localhost:3000/weather?address=${searchValue}`).then((response) => {
+  fetch(`/weather?address=${searchValue}`).then((response) => {
     // const responseJson = response.json();
     const responseText = response.text();
     responseText.then((data) => {
